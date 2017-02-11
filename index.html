@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title> Webtorrent-experiment </title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
+    <script>
+      var client = new WebTorrent()
+
+      client.add('http://127.0.0.1:8080/video.torrent', function(torrent) {
+        console.log('client is downloading:', torrent.infoHash)
+        //torrent.files[0].appendTo('body')
+      })
+      
+    </script>
+  </body>
+</html>
